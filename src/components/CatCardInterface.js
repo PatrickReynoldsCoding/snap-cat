@@ -9,9 +9,8 @@ import NewCatButton from "./NewCatButton";
 import { getCatData } from "@/pages/api/getCatData";
 
 export default function CatCardInterface() {
-  // State variables to store cat fact and image
-  const [catFact, setCatFact] = useState(null);
-  const [catImage, setCatImage] = useState(null);
+  // State to store array of cat card data
+  const [catCards, setCatCards] = useState([]);
   // Used to only load component once the api data has loaded
   const [loading, setLoading] = useState(false);
   // Used to disable button to spamming multiple clicks
@@ -23,9 +22,8 @@ export default function CatCardInterface() {
     setLoading(true);
     getCatData()
       .then(([fact, image]) => {
-        // Set catFact and catImage state with data returned from getCatData
-        setCatFact(fact);
-        setCatImage(image[0]);
+        // Add new cat card data to the array
+        setCatCards([...catCards, { fact, image }]);
       })
       .catch((error) => console.error(error));
     setLoading(false);
@@ -36,9 +34,7 @@ export default function CatCardInterface() {
     <div className={styles["cat-card-interface"]}>
       {loading && <p>Loading...</p>}{" "}
       {/* Show a loading message while data is being fetched */}
-      {catFact && catImage && (
-        <CatCardContainer catFact={catFact} catImage={catImage} />
-      )}
+      {catCards.length > 0 && <CatCardContainer catCards={catCards} />}
       <NewCatButton handleClick={handleClick} enabled={buttonEnabler} />
     </div>
   );

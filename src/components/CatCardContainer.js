@@ -6,7 +6,13 @@ import CatCard from "./CatCard";
 export default function CatCardContainer(props) {
   return (
     <div className={styles["cat-card-container"]}>
-      <CatCard catFact={props.catFact} catImage={props.catImage} />
+      {props.catCards.map((carCard, index) => (
+        <CatCard
+          key={index}
+          catFact={carCard.fact}
+          catImage={carCard.image[0]}
+        />
+      ))}
     </div>
   );
 }
