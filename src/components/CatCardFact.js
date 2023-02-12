@@ -7,8 +7,8 @@ export default function CatCardFact() {
         <h1>Cat fact</h1>
         <h2>Hope you find it furscinating!</h2>
         <p>
-          "If your cat snores, or rolls over on his back to expose his belly, it
-          means he trusts you."
+          If your cat snores, or rolls over on his back to expose his belly, it
+          means he trusts you.
         </p>
       </div>
     </div>
