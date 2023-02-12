@@ -5,18 +5,11 @@ import styles from "@/styles/Home.module.css";
 import CatCardImage from "./CatCardImage";
 import CatCardFact from "./CatCardFact";
 
-//dummy api data
-const fetchedCatImage = {
-  id: "b7d",
-  url: "https://cdn2.thecatapi.com/images/b7d.jpg",
-  width: 500,
-  height: 334,
-};
-export default function CatCard() {
+export default function CatCard(props) {
   return (
     <div className={styles["cat-card"]}>
-      <CatCardImage fetchedCatImage={fetchedCatImage} />
-      <CatCardFact />
+      <CatCardImage fetchedCatImage={props.catImage} />
+      <CatCardFact fetchedCatFact={props.catFact} />
     </div>
   );
 }
