@@ -9,7 +9,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: slideIn 0.5s ease-in-out forwards;
 
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
   .cat-card {
     position: relative;
     background-color: rgb(255, 255, 255);
@@ -43,10 +54,6 @@
 
       .cat-card-fact-text-container {
         padding: 5% 10%;
-
-        p > {
-          overflow: hidden;
-        }
       }
     }
   }
