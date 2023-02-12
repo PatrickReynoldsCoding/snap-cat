@@ -2,6 +2,11 @@
 
 [How I built this environment](#how-i-built-this-environment) |
 
+## About
+
+This is a simple one page website built with Next.js.
+It's aim is to use a button to pull a cat fact from https://catfact.ninja/#/Facts/ and a cat image from https://api.thecatapi.com/v1/images/search.
+
 ## Schedule
 
 Started 13.50

@@ -9,10 +9,26 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
 
-.cat-card {
-  background-color: rgb(17, 253, 68);
-  height: 450px;
-  width: 295px;
+  .cat-card {
+    background-color: rgb(17, 253, 68);
+    border-radius: 5%;
+    height: 450px;
+    width: 295px;
+
+    .cat-card-image {
+      overflow: hidden;
+      top: 0;
+      height: 50%;
+      border-radius: 5% 5% 0 0;
+      background-color: red;
+      display: flex;
+      justify-content: center;
+      > img {
+        height: 100%;
+      }
+    }
+    .cat-card-fact {
+    }
+  }
 }
