@@ -1,38 +1,132 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js project with Sass and CI
 
-## Getting Started
+[How I built this environment](#how-i-built-this-environment) |
 
-First, run the development server:
+## Schedule
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+started 13.50
+
+## How I built this environment
+
+### Next.js
+
+`npx create-next-app .`
+
+### install dependacies
+
+`npm i sass jest cypress`
+
+### Styling (Sass)
+
+Add sass options to next.config.js
+
+```javascript
+/** @type {import('next').NextConfig} */
+const path = require("path");
+
+const nextConfig = {
+  reactStrictMode: true,
+  sassOptions: {
+    includePaths: [path.join(__dirname, "styles")],
+  },
+};
+
+module.exports = nextConfig;
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+[Setup sass directories based on 7-1 pattern](https://sass-guidelin.es/#the-7-1-pattern)
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+[Download from here for easy setup](https://github.com/PatrickReynoldsCoding/sass-boilerplate-with-emotion-version)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Compile sass using:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+`sass --watch sass/main.scss:styles/Home.module.css`
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+#### Preserve CSS hyphenated class names
 
-## Learn More
+Next.js uses Emotion-Library and imports styles as a JS object. This will throw an error with any css classnames that are hyphanated.
 
-To learn more about Next.js, take a look at the following resources:
+E.g:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```javascript
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+  <div className={styles.class-name} >
 
-## Deploy on Vercel
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+To prevent editing all your hyphenated class names, you can call them as an array element.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```javascript
+
+  <div className={styles['cat-button']} >
+
+```
+
+### Testing (Jest & Cypress)
+
+#### Jest
+
+Add `"test": "jest"` to scripts in package.json
+
+Create spec folder in root for any unit and integration tests
+
+#### Cypress
+
+Run to open wizard and setup directory `npx cypress open`
+
+#### CI
+
+Create .github/workflow/ci.yml
+
+This boilerplate code I've written will enable run Jest and Cypress tests upon each merge:
+
+````
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+env:
+  NODE_VERSION: 14
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18]
+
+    name: Node.js ${{ matrix.node-version }}
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+
+    - name: Install dependencies
+      run: |
+        npm ci
+
+    - name: Test with Jest
+      run: |
+        npm test
+
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Cypress run
+      uses: cypress-io/github-action@v5
+      with:
+        start: npm run dev
+        wait-on: 'http://localhost:3000'
+        ```
+````
