@@ -12,10 +12,14 @@ export default function CatCardInterface() {
   // State variables to store cat fact and image
   const [catFact, setCatFact] = useState(null);
   const [catImage, setCatImage] = useState(null);
+  // Used to only load component once the api data has loaded
   const [loading, setLoading] = useState(false);
+  // Used to disable button to spamming multiple clicks
+  const [buttonEnabler, setButtonEnabler] = useState(true);
 
   // handler to pull data
   const handleClick = async () => {
+    setButtonEnabler(false);
     setLoading(true);
     getCatData()
       .then(([fact, image]) => {
@@ -25,6 +29,7 @@ export default function CatCardInterface() {
       })
       .catch((error) => console.error(error));
     setLoading(false);
+    setButtonEnabler(true);
   };
 
   return (
@@ -34,7 +39,7 @@ export default function CatCardInterface() {
       {catFact && catImage && (
         <CatCardContainer catFact={catFact} catImage={catImage} />
       )}
-      <NewCatButton handleClick={handleClick} />
+      <NewCatButton handleClick={handleClick} enabled={buttonEnabler} />
     </div>
   );
 }
