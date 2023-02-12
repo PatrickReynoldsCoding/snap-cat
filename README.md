@@ -4,7 +4,12 @@
 
 ## Schedule
 
-started 13.50
+Started 13.50
+_All times include regular Pomodoro breaks_
+
+Planning phase and setting up environment (1.5 hours)
+lunch ends 15.50
+Building and testing
 
 ## Planning Tests
 
