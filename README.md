@@ -12,7 +12,7 @@ started 13.50
 
 `npx create-next-app .`
 
-### install dependacies
+### install dependencies
 
 `npm i sass jest cypress`
 
@@ -72,7 +72,7 @@ Create spec folder in root for any unit and integration tests
 
 #### Cypress
 
-Run to open wizard and setup directory `npx cypress open`
+Run to open wizard and setup scaffolding `npx cypress open`
 
 #### CI
 
@@ -80,7 +80,7 @@ Create .github/workflow/ci.yml
 
 This boilerplate code I've written will enable run Jest and Cypress tests upon each merge:
 
-````
+````Github Actions
 name: CI
 
 on:

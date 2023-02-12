@@ -1,0 +1,9 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+@use "../abstracts";
+
+.cat-button {
+  padding: abstracts.$padding;
+  background-color: abstracts.$background-color;
+}
