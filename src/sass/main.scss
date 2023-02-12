@@ -11,8 +11,10 @@
 @import "layout/header", "layout/footer";
 
 // 5. Components
-@import "components/button";
+@import "components/newCatButton";
 @import "components/homeContainer";
+@import "components/catCardInterface";
+@import "components/catCard";
 
 // 6. Page-specific styles
 @import "pages/home";
