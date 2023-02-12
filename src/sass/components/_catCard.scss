@@ -5,12 +5,15 @@
 .cat-card-container {
   // background-color: rgb(17, 155, 253);
   height: 500px;
-  width: 310px;
+  width: 99%;
+  max-width: 600px;
+  // align-self: flex-start;
+  padding-right: 200px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   gap: 2%;
-  overflow-x: scroll;
+  overflow-x: hidden;
   animation: slideIn 0.5s ease-in-out forwards;
 
   @keyframes slideIn {
