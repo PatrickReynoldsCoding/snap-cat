@@ -1,7 +1,9 @@
+// Components
+import HomeContainer from "../components/HomeContainer";
 export default function Home() {
   return (
     <>
-      <div className="home-container">asdfasdfas</div>
+      <HomeContainer />
     </>
   );
 }
