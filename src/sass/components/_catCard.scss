@@ -2,8 +2,17 @@
 // This file contains all styles related to the CatCard component.
 // -----------------------------------------------------------------------------
 
-.cat-card {
-  background-color: green;
+.cat-card-container {
+  background-color: rgb(17, 155, 253);
   height: 500px;
   width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cat-card {
+  background-color: rgb(17, 253, 68);
+  height: 450px;
+  width: 295px;
 }
