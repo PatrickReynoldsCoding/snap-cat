@@ -6,16 +6,15 @@
 // 2. Vendors
 
 // 3. Base stuff
-@import "base/fonts", "base/typography", "base/helpers";
 
 // 4. Layout-related sections
 @import "layout/header", "layout/footer";
 
 // 5. Components
 @import "components/button";
+@import "components/home";
 
 // 6. Page-specific styles
 @import "pages/home";
 
 // 7. Themes
-@import "themes/default";
