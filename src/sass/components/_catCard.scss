@@ -3,7 +3,7 @@
 // -----------------------------------------------------------------------------
 
 .cat-card-container {
-  background-color: rgb(17, 155, 253);
+  // background-color: rgb(17, 155, 253);
   height: 500px;
   width: 500px;
   display: flex;
@@ -12,7 +12,7 @@
 
   .cat-card {
     position: relative;
-    background-color: rgb(17, 253, 68);
+    background-color: rgb(255, 255, 255);
     border-radius: 5%;
     height: 450px;
     width: 295px;
@@ -24,7 +24,6 @@
       top: 0;
       height: 50%;
       border-radius: 5% 5% 0 0;
-      background-color: red;
       display: flex;
       justify-content: center;
       > img {
@@ -35,10 +34,15 @@
       position: absolute;
       height: 55%;
       width: 90%;
+      margin: 10;
       bottom: 0;
       background: #ffffff;
       box-shadow: 0px 4px 36px rgba(0, 0, 0, 0.25);
       border-radius: 15px;
+
+      .cat-card-fact-text-container {
+        padding: 5% 10%;
+      }
     }
   }
 }

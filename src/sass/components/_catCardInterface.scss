@@ -3,13 +3,13 @@
 // -----------------------------------------------------------------------------
 
 .cat-card-interface {
-  background-color: rgb(220, 9, 188);
+  // background-color: rgb(220, 9, 188);
   height: 700px;
   width: 700px;
   max-height: 100%;
   max-width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
