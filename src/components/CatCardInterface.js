@@ -21,7 +21,7 @@ export default function CatCardInterface() {
       .then(([fact, image]) => {
         // Set catFact and catImage state with data returned from getCatData
         setCatFact(fact);
-        setCatImage(image);
+        setCatImage(image[0]);
       })
       .catch((error) => console.error(error));
     setLoading(false);
