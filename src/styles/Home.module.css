@@ -75,7 +75,7 @@
   display: flex;
   justify-content: center;
 }
-.cat-card-container .cat-card .cat-card-image {
+.cat-card-container .cat-card .cat-card-image-container {
   overflow: hidden;
   top: 0;
   height: 50%;
@@ -83,7 +83,7 @@
   display: flex;
   justify-content: center;
 }
-.cat-card-container .cat-card .cat-card-image > img {
+.cat-card-container .cat-card .cat-card-image-container .cat-card-image {
   height: 100%;
 }
 .cat-card-container .cat-card .cat-card-fact {
