@@ -2,6 +2,11 @@
 
 [How I built this environment](#how-i-built-this-environment) |
 
+## About
+
+This is a simple one page website built with Next.js.
+It's aim is to use a button to pull a cat fact from https://catfact.ninja/#/Facts/ and a cat image from https://api.thecatapi.com/v1/images/search.
+
 ## Schedule
 
 Started 13.50
@@ -13,12 +18,12 @@ Building and testing
 
 ## Planning Tests
 
-#### Check for elements
+### Check for elements
 
 1. Create exist tests for all this planned HTML (not cat-card-container and children).
    ![Image 1](./public/images/readme/html-planning.png)
 
-#### Test functionality
+### Test functionality
 
 1. Press button and cat-card-container and children should exist
 

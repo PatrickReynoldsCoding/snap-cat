@@ -1,0 +1,43 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the NewCatButton component.
+// -----------------------------------------------------------------------------
+
+.new-cat-button {
+  height: 50px;
+  width: 180px;
+  background-color: #0f8b8d;
+  border-radius: 20px;
+  text-align: center;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  display: flex;
+
+  align-items: center;
+
+  .new-cat-button-cross-symbol {
+    position: relative;
+    width: 29px;
+    height: 29px;
+    margin: 0 10%;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 60%;
+      height: 2px;
+      background-color: rgb(255, 255, 255);
+      transform: translate(-50%, -50%);
+    }
+
+    &::before {
+      transform: translate(-50%, -50%) rotate(-90deg);
+    }
+  }
+  .new-cat-button-text {
+    color: white;
+    font-size: large;
+  }
+}

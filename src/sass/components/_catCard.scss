@@ -1,0 +1,48 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the CatCard component.
+// -----------------------------------------------------------------------------
+
+.cat-card-container {
+  // background-color: rgb(17, 155, 253);
+  height: 500px;
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .cat-card {
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5%;
+    height: 450px;
+    width: 295px;
+    display: flex;
+    justify-content: center;
+
+    .cat-card-image-container {
+      overflow: hidden;
+      top: 0;
+      height: 50%;
+      border-radius: 5% 5% 0 0;
+      display: flex;
+      justify-content: center;
+      .cat-card-image {
+        height: 100%;
+      }
+    }
+    .cat-card-fact {
+      position: absolute;
+      height: 55%;
+      width: 90%;
+      margin: 10;
+      bottom: 0;
+      background: #ffffff;
+      box-shadow: 0px 4px 36px rgba(0, 0, 0, 0.25);
+      border-radius: 15px;
+
+      .cat-card-fact-text-container {
+        padding: 5% 10%;
+      }
+    }
+  }
+}
