@@ -6,6 +6,51 @@
 
 started 13.50
 
+## Planning Tests
+
+#### Check for elements
+
+1. Create exist tests for all this planned HTML (not cat-card-container and children).
+   ![Image 1](./public/images/readme/html-planning.png)
+
+#### Test functionality
+
+1. Press button and cat-card-container and children should exist
+
+(STRETCH) show multiple cat cards on multiple button presses
+
+2. Cat button should be disabled for 2 seconds after click
+
+```Cypress
+// Rough plan
+  cy.get('button').click();
+  cy.get('button').should('be.disabled');
+  cy.wait(2000);
+  cy.get('button').should('not.be.disabled');
+```
+
+### API
+
+#### Unit
+
+1. It should return a cat fact from the API
+
+#### Integration
+
+1. It should display the cat fact in HTML
+
+#### E2E
+
+1. it displays the cat fact and image'
+
+```Cypress
+// Rough plan
+    cy.visit('/');
+
+    cy.get('#cat-fact').should('contain', 'Did you know?');
+    cy.get('#cat-image').should('exist');
+```
+
 ## How I built this environment
 
 ### Next.js
