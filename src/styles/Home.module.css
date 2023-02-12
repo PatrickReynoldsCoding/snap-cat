@@ -57,18 +57,18 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .cat-card-container {
   height: 500px;
   width: 99%;
   max-width: 600px;
-  padding-right: 200px;
+  padding-right: 295px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   gap: 2%;
-  overflow-x: hidden;
   animation: slideIn 0.5s ease-in-out forwards;
 }
 @keyframes slideIn {

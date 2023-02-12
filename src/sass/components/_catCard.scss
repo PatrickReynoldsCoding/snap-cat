@@ -8,12 +8,11 @@
   width: 99%;
   max-width: 600px;
   // align-self: flex-start;
-  padding-right: 200px;
+  padding-right: 295px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   gap: 2%;
-  overflow-x: hidden;
   animation: slideIn 0.5s ease-in-out forwards;
 
   @keyframes slideIn {
