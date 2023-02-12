@@ -13,12 +13,12 @@ Building and testing
 
 ## Planning Tests
 
-#### Check for elements
+### Check for elements
 
 1. Create exist tests for all this planned HTML (not cat-card-container and children).
    ![Image 1](./public/images/readme/html-planning.png)
 
-#### Test functionality
+### Test functionality
 
 1. Press button and cat-card-container and children should exist
 
