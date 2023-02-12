@@ -100,4 +100,14 @@
   padding: 5% 10%;
 }
 
+.logo-container {
+  z-index: 1;
+}
+.logo-container .logo-image {
+  z-index: inherit;
+}
+.logo-container .logo-image:hover {
+  cursor: pointer;
+}
+
 /*# sourceMappingURL=Home.module.css.map */

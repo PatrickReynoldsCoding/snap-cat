@@ -1,0 +1,13 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the Logo component.
+// -----------------------------------------------------------------------------
+
+.logo-container {
+  z-index: 1;
+  .logo-image {
+    z-index: inherit;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
