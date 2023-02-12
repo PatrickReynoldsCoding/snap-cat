@@ -68,11 +68,19 @@
   animation: slideIn 0.5s ease-in-out forwards;
 }
 @keyframes slideIn {
-  from {
+  0% {
     opacity: 0;
     transform: translateX(-100%);
   }
-  to {
+  25% {
+    opacity: 0.1;
+    transform: translateX(-50%);
+  }
+  75% {
+    opacity: 0.5;
+    transform: translateX(20%);
+  }
+  100% {
     opacity: 1;
     transform: translateX(0);
   }
