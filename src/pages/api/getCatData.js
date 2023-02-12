@@ -5,10 +5,10 @@ export const getCatData = async () => {
     // Request to get cat fact
     fetch("https://catfact.ninja/fact")
       .then((res) => res.json())
-      .then((data) => console.log(data)),
+      .then((data) => data),
     // Request to get cat image
     fetch("https://api.thecatapi.com/v1/images/search")
       .then((res) => res.json())
-      .then((data) => console.log(data)),
+      .then((data) => data),
   ]);
 };

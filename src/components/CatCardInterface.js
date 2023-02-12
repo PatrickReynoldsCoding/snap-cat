@@ -12,9 +12,11 @@ export default function CatCardInterface() {
   // State variables to store cat fact and image
   const [catFact, setCatFact] = useState(null);
   const [catImage, setCatImage] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   // handler to pull data
-  const handleClick = () => {
+  const handleClick = async () => {
+    setLoading(true);
     getCatData()
       .then(([fact, image]) => {
         // Set catFact and catImage state with data returned from getCatData
@@ -22,19 +24,17 @@ export default function CatCardInterface() {
         setCatImage(image);
       })
       .catch((error) => console.error(error));
+    setLoading(false);
   };
-
-  // useEffect hook to call handleClick only when button is clicked
-  useEffect(() => {
-    handleClick();
-  }, []);
 
   return (
     <div className={styles["cat-card-interface"]}>
-      {catFact?.fact && catImage?.url && (
+      {loading && <p>Loading...</p>}{" "}
+      {/* Show a loading message while data is being fetched */}
+      {catFact && catImage && (
         <CatCardContainer catFact={catFact} catImage={catImage} />
       )}
-      <NewCatButton onClick={handleClick} />
+      <NewCatButton handleClick={handleClick} />
     </div>
   );
 }
