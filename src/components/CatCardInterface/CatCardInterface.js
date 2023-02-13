@@ -27,12 +27,16 @@ export default function CatCardInterface() {
       })
       .catch((error) => console.error(error));
     setLoading(false);
-    setButtonEnabler(true);
+    setTimeout(() => {
+      setButtonEnabler(true);
+    }, 1000);
   };
 
   return (
     <div className={styles["cat-card-interface"]}>
-      {loading && <p>Loading...</p>}{" "}
+      {loading && (
+        <p className={styles["cat-card-interface-loading"]}>Loading...</p>
+      )}{" "}
       {/* Show a loading message while data is being fetched */}
       {catCards.length > 0 && <CatCardContainer catCards={catCards} />}
       <NewCatButton handleClick={handleClick} enabled={buttonEnabler} />
