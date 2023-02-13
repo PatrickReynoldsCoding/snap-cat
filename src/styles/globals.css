@@ -25,3 +25,8 @@ p {
   text-align: center;
   color: #828282;
 }
+
+a {
+  text-decoration: none;
+  color: #ee5338;
+}
