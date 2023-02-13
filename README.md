@@ -240,3 +240,9 @@ jobs:
         wait-on: 'http://localhost:3000'
         ```
 ````
+
+## Contact
+
+Email: [PatrickReynoldsCoding@gmail.com](https://mail.google.com/mail/u/0/?fs=1&to=patrickreynoldscoding@gmail.com&su=Hi%20Paddy&body=&tf=cm)
+Linkedin: [Linkedin](https://www.linkedin.com/in/reynolds-patrick/)
+Website: [PatrickReynolds.dev](https://www.patrickreynolds.dev/)
