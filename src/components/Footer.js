@@ -4,7 +4,9 @@ import styles from "@/styles/Home.module.css";
 export default function Footer() {
   return (
     <footer className={styles["footer"]}>
+      <br />
       <p>Created by Patrick Reynolds</p>
+      <br />
       <br />
       <p>
         Email:{" "}
@@ -21,6 +23,12 @@ export default function Footer() {
       <p>
         Personal site:{" "}
         <a href="https://PatrickReynolds.dev">PatrickReynolds.dev</a>
+      </p>
+      <p>
+        YouTube:{" "}
+        <a href="https://www.youtube.com/@ReynoldsPatrick">
+          https://www.youtube.com/@ReynoldsPatrick
+        </a>
       </p>
     </footer>
   );
