@@ -90,25 +90,19 @@ Figma planning needed html:
 
 #### API
 
-##### Unit
+##### Unit testing with Jest
 
-1. It should return a cat fact from the API
+- Test the rendering of the logo and the button to make sure they are present and functioning correctly.
 
-##### Integration
+##### Integration testing with Cypress
 
-1. It should display the cat fact in HTML
+- Test the complete flow of the website starting from loading the page, clicking the button and checking if the cards are rendered correctly.
 
-##### E2E
+- Test the functionality of the button to make sure it's adding the cards correctly when pressed.
 
-1. it displays the cat fact and image'
+- Test the functionality of the APIs to make sure they are returning data and the data is being displayed correctly on the cards.
 
-```Cypress
-// Rough plan
-    cy.visit('/');
-
-    cy.get('#cat-fact').should('contain', 'Did you know?');
-    cy.get('#cat-image').should('exist');
-```
+- Test the responsiveness of the website to make sure it's working correctly on different screen sizes.
 
 ## How to built this environment
 
