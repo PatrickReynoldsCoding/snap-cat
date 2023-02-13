@@ -7,46 +7,66 @@
 ## About
 
 This is a simple one page website built with Next.js.
-It's aim is to use a button to pull a cat fact from https://catfact.ninja/#/Facts/ and a cat image from https://api.thecatapi.com/v1/images/search and present in a card.
+It's aim is to use a button to pull a cat fact from [https://catfact.ninja/#/Facts/](https://catfact.ninja/#/Facts/) and a cat image from [https://api.thecatapi.com/v1/images/search](https://api.thecatapi.com/v1/images/search) and present in a card.
 
 ## Technologies used
- #### Testing
-  - Cypress
-  - Jest
-  - Github Actions for CI
- 
- #### Styling 
-  - Sass
-  - Figma [Click here to see Figma Design file](https://www.figma.com/file/2Avg8gYm4astD7qN4cxads/Kittypedia?node-id=0%3A1&t=6G29p3HFnX7Ndu6v-0)
-  
-  #### Linting
-  - Prettier (VSCode Extention)
-  - Eslint
-  - Error Lens (VSCode Extention)
-  
-  #### Planning
-  - Figma Jam [Click here to see Figma Jam file](https://www.figma.com/file/KFcO9Q84bRAG9h9ribW9XC/Kittypedia?node-id=14%3A48&t=7Pc0lplwbEWBF5Bd-0)
-  - Github
-  
-  #### Deployment
-  - Vercel 
-  
 
-  
+### Testing
+
+- Cypress
+- Jest
+- Github Actions for CI
+
+### Styling
+
+- Sass
+- Figma [Click here to see Figma Design file](https://www.figma.com/file/2Avg8gYm4astD7qN4cxads/Kittypedia?node-id=0%3A1&t=6G29p3HFnX7Ndu6v-0)
+
+### Linting
+
+- Prettier (VSCode Extension)
+- Eslint
+- Error Lens (VSCode Extension)
+
+### Planning
+
+- Figma Jam [Click here to see Figma Jam file](https://www.figma.com/file/KFcO9Q84bRAG9h9ribW9XC/Kittypedia?node-id=14%3A48&t=7Pc0lplwbEWBF5Bd-0)
+- Github Projects [Click here to see Github Projects kanban board](https://github.com/users/PatrickReynoldsCoding/projects/8/views/1)
+
+### Deployment
+
+- Vercel
 
 ## Usage
 
-Upon visiting the site, click the "New cat" button. this will generate a cat card. Keep clicking for more cards
+Upon visiting the site, click the "New cat" button. this will generate a cat card. Keep clicking for more cards to appear.
 
 ## Development
-## Planning Tests
 
-### Check for elements
+### Planning style
+
+Initial Planning:
+![Image 1](./public/images/readme/styling-moodboards.png)
+
+Styling moodboard:
+![Image 2](./public/images/readme/styling-moodboards.png)
+
+Figma catCard concepts:
+![Image 3](./public/images/readme/styling-card-concepts.png)
+
+Figma MVP mockup:
+![Image 4](./public/images/readme/styling-mvp-mockup.png)
+
+Figma planning needed html:
+![Image 5](./public/images/readme/styling-html-planning.png)
+
+### Planning Tests
+
+#### Check for elements
 
 1. Create exist tests for all this planned HTML (not cat-card-container and children).
-   ![Image 1](./public/images/readme/html-planning.png)
 
-### Test functionality
+#### Test functionality
 
 1. Press button and cat-card-container and children should exist
 
@@ -62,17 +82,17 @@ Upon visiting the site, click the "New cat" button. this will generate a cat car
   cy.get('button').should('not.be.disabled');
 ```
 
-### API
+#### API
 
-#### Unit
+##### Unit
 
 1. It should return a cat fact from the API
 
-#### Integration
+##### Integration
 
 1. It should display the cat fact in HTML
 
-#### E2E
+##### E2E
 
 1. it displays the cat fact and image'
 
@@ -154,7 +174,7 @@ Run to open wizard and setup scaffolding `npx cypress open`
 
 Add baseUrl to cypress.config.js
 
-``` Javascript
+```Javascript
   e2e: {
     baseUrl: "http://localhost:3000",
     setupNodeEvents(on, config) {
