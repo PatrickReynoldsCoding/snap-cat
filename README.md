@@ -2,7 +2,7 @@
 
 [Click here to visit the site!](https://snap-5c6vd3k76-patrickreynoldscoding.vercel.app/)
 
-[How I built this environment](#how-i-built-this-environment) |
+[About](#about) | [Technologies used](#technologies-used) | [Usage](#usage) |  [Development](#development) |  [How to built this environment](#how-to-built-this-environment) | [Contact](#contact)
 
 ## About
 
