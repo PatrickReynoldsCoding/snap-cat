@@ -46,6 +46,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+  margin: 0.5%;
 }
 
 .cat-card-interface {
@@ -61,29 +63,12 @@
 
 .cat-card-container {
   height: 500px;
-  width: 500px;
+  width: 97%;
+  padding-right: 380px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  animation: slideIn 0.5s ease-in-out forwards;
-}
-@keyframes slideIn {
-  0% {
-    opacity: 0;
-    transform: translateX(-100%);
-  }
-  25% {
-    opacity: 0.1;
-    transform: translateX(-50%);
-  }
-  75% {
-    opacity: 0.5;
-    transform: translateX(20%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  gap: 2%;
 }
 .cat-card-container .cat-card {
   position: relative;
@@ -93,6 +78,25 @@
   width: 295px;
   display: flex;
   justify-content: center;
+  animation: slideIn 0.5s ease-in-out forwards;
+}
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  25% {
+    opacity: 0.1;
+    transform: translateX(50%);
+  }
+  75% {
+    opacity: 0.5;
+    transform: translateX(-5%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 .cat-card-container .cat-card .cat-card-image-container {
   overflow: hidden;
