@@ -1,9 +1,9 @@
 html {
-  height: 100%;
   font-family: "Inter";
 }
 body {
   background: linear-gradient(180deg, #c8f7ec, #ffffff);
+  margin: 0;
 }
 
 h1 {
@@ -24,4 +24,9 @@ p {
   font-size: 15px;
   text-align: center;
   color: #828282;
+}
+
+a {
+  text-decoration: none;
+  color: #ee5338;
 }
