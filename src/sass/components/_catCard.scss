@@ -6,9 +6,9 @@
   // background-color: rgb(17, 155, 253);
   height: 500px;
   width: 97%;
-  max-width: 600px;
+  // max-width: 600px;
   // align-self: flex-start;
-  padding-right: 295px;
+  padding-right: 380px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -27,15 +27,15 @@
     @keyframes slideIn {
       0% {
         opacity: 0;
-        transform: translateX(-100%);
+        transform: translateX(100%);
       }
       25% {
         opacity: 0.1;
-        transform: translateX(-50%);
+        transform: translateX(50%);
       }
       75% {
         opacity: 0.5;
-        transform: translateX(20%);
+        transform: translateX(-5%);
       }
       100% {
         opacity: 1;
