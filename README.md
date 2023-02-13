@@ -1,21 +1,44 @@
-# Next.js project with Sass and CI
+# CatSnap a site to learn more about cats
+
+[Click here to visit the site!](https://snap-5c6vd3k76-patrickreynoldscoding.vercel.app/)
 
 [How I built this environment](#how-i-built-this-environment) |
 
 ## About
 
 This is a simple one page website built with Next.js.
-It's aim is to use a button to pull a cat fact from https://catfact.ninja/#/Facts/ and a cat image from https://api.thecatapi.com/v1/images/search.
+It's aim is to use a button to pull a cat fact from https://catfact.ninja/#/Facts/ and a cat image from https://api.thecatapi.com/v1/images/search and present in a card.
 
-## Schedule
+## Technologies used
+ #### Testing
+  - Cypress
+  - Jest
+  - Github Actions for CI
+ 
+ #### Styling 
+  - Sass
+  - Figma [Click here to see Figma Design file](https://www.figma.com/file/2Avg8gYm4astD7qN4cxads/Kittypedia?node-id=0%3A1&t=6G29p3HFnX7Ndu6v-0)
+  
+  #### Linting
+  - Prettier (VSCode Extention)
+  - Eslint
+  - Error Lens (VSCode Extention)
+  
+  #### Planning
+  - Figma Jam [Click here to see Figma Jam file](https://www.figma.com/file/KFcO9Q84bRAG9h9ribW9XC/Kittypedia?node-id=14%3A48&t=7Pc0lplwbEWBF5Bd-0)
+  - Github
+  
+  #### Deployment
+  - Vercel 
+  
 
-Started 13.50
-_All times include regular Pomodoro breaks_
+  
 
-Planning phase and setting up environment (1.5 hours)
-lunch ends 15.50
-Building and testing
+## Usage
 
+Upon visiting the site, click the "New cat" button. this will generate a cat card. Keep clicking for more cards
+
+## Development
 ## Planning Tests
 
 ### Check for elements
@@ -61,7 +84,7 @@ Building and testing
     cy.get('#cat-image').should('exist');
 ```
 
-## How I built this environment
+## How to built this environment
 
 ### Next.js
 
@@ -128,6 +151,18 @@ Create spec folder in root for any unit and integration tests
 #### Cypress
 
 Run to open wizard and setup scaffolding `npx cypress open`
+
+Add baseUrl to cypress.config.js
+
+``` Javascript
+  e2e: {
+    baseUrl: "http://localhost:3000",
+    setupNodeEvents(on, config) {
+      // implement node event listeners here
+    },
+  },
+});
+```
 
 #### CI
 
