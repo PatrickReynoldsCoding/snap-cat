@@ -46,19 +46,25 @@ Upon visiting the site, click the "New cat" button. this will generate a cat car
 ### Planning style
 
 Initial Planning:
-![Image 1](./public/images/readme/styling-moodboards.png)
+
+<kbd><img src="./public/images/readme/styling-moodboards.png" /></kbd>
 
 Styling moodboard:
-![Image 2](./public/images/readme/styling-moodboards.png)
+
+<kbd><img src="./public/images/readme/styling-moodboards.png" /></kbd>
 
 Figma catCard concepts:
-![Image 3](./public/images/readme/styling-card-concepts.png)
+
+<kbd><img src="./public/images/readme/styling-card-concepts.png" /></kbd>
 
 Figma MVP mockup:
-![Image 4](./public/images/readme/styling-mvp-mockup.png)
+
+<kbd><img src="./public/images/readme/styling-mvp-mockup.png" /></kbd>
 
 Figma planning needed html:
-![Image 5](./public/images/readme/styling-html-planning.png)
+
+<kbd><img src="./public/images/readme/styling-html-planning.png" /></kbd>
+
 
 ### Planning Tests
 
@@ -244,5 +250,7 @@ jobs:
 ## Contact
 
 Email: [PatrickReynoldsCoding@gmail.com](https://mail.google.com/mail/u/0/?fs=1&to=patrickreynoldscoding@gmail.com&su=Hi%20Paddy&body=&tf=cm)
+
 Linkedin: [Linkedin](https://www.linkedin.com/in/reynolds-patrick/)
+
 Website: [PatrickReynolds.dev](https://www.patrickreynolds.dev/)
