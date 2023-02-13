@@ -1,6 +1,6 @@
 # CatSnap a site to learn more about cats
 
-[Click here to visit the site!](https://snap-5c6vd3k76-patrickreynoldscoding.vercel.app/)
+[Click here to visit the site!](https://snap-cat.vercel.app/)
 
 [About](#about) | [Technologies used](#technologies-used) | [Usage](#usage) |  [Development](#development) |  [How to built this environment](#how-to-built-this-environment) | [Contact](#contact)
 
