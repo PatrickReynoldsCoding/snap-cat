@@ -2,6 +2,7 @@ import React from "react";
 import styles from "@/styles/Home.module.css";
 
 export default function NewCatButton(props) {
+  // Function to trigger APIs and load state on click
   const handleClick = () => {
     if (props.enabled) props.handleClick();
   };
