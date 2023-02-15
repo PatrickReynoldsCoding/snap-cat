@@ -145,11 +145,21 @@ To prevent editing all your hyphenated class names, you can call them as an arra
 
 #### Install
 
-eslint --init
+`eslint --init`
+
+#### Config
+
+``` Javascript
+// .eslintrc.js
+    "rules": {
+      "react/prop-types": "off",
+      "indent": ["error", 2]
+    }
+```
 
 #### Run
 
-npm run lint
+`npm run lint`
 
 ### Testing (Jest & Cypress)
 
