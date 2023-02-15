@@ -68,37 +68,18 @@ Figma planning needed html:
 
 ### Planning Tests
 
-#### Check for elements
 
-1. Create exist tests for all this planned HTML (not cat-card-container and children).
-
-#### Test functionality
-
-1. Press button and cat-card-container and children should exist
-
-(STRETCH) show multiple cat cards on multiple button presses
-
-2. Cat button should be disabled for 2 seconds after click
-
-```Cypress
-// Rough plan
-  cy.get('button').click();
-  cy.get('button').should('be.disabled');
-  cy.wait(2000);
-  cy.get('button').should('not.be.disabled');
-```
-
-#### API
-
-##### Unit testing with Jest
+#### Unit testing with Cypress
 
 - Test the rendering of the logo and the button to make sure they are present and functioning correctly.
 
-##### Integration testing with Cypress
+#### Integration testing with Cypress
 
 - Test the complete flow of the website starting from loading the page, clicking the button and checking if the cards are rendered correctly.
 
 - Test the functionality of the button to make sure it's adding the cards correctly when pressed.
+
+- Test the functionality of the button to make sure its disabled for 1 second after first click.
 
 - Test the functionality of the APIs to make sure they are returning data and the data is being displayed correctly on the cards.
 
@@ -240,6 +221,13 @@ jobs:
         wait-on: 'http://localhost:3000'
         ```
 ````
+
+## Helpful resourses
+
+### Getting cypress testing to work with emotion libraries unique classNames
+
+- [https://github.com/cypress-io/cypress/issues/1212](https://github.com/cypress-io/cypress/issues/1212)
+- [CSS attribute selector](https://www.w3schools.com/css/css_attribute_selectors.asp#:~:text=The%20%5Battribute*%3D%22value%22,to%20be%20a%20whole%20word!)
 
 ## Contact
 
