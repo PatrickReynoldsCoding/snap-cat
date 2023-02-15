@@ -1,7 +1,7 @@
 import styles from "@/styles/Home.module.css";
 
 // Components
-import { HomeWithNavAndFoot } from "@/components/NavAndFooterAdder";
+import { HomeWithNavAndFoot } from "@/functions/NavAndFooterAdder";
 
 export default function Home() {
   return (
