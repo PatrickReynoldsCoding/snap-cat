@@ -10,6 +10,8 @@
     "test": "jest"
   },
   "dependencies": {
+    "@emotion/cache": "^11.10.5",
+    "@emotion/react": "^11.10.5",
     "@next/font": "13.1.6",
     "cypress": "^12.5.1",
     "eslint": "8.34.0",
