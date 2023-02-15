@@ -1,4 +1,4 @@
-# CatSnap a site to learn more about cats
+# SnapCat a site to learn more about cats
 
 [Click here to visit the site!](https://snap-cat.vercel.app/)
 
