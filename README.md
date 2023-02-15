@@ -141,6 +141,16 @@ To prevent editing all your hyphenated class names, you can call them as an arra
 
 ```
 
+### Linting 
+
+#### Install
+
+eslint --init
+
+#### Run
+
+npm run lint
+
 ### Testing (Jest & Cypress)
 
 #### Jest
@@ -169,7 +179,7 @@ Add baseUrl to cypress.config.js
 
 Create .github/workflow/ci.yml
 
-This boilerplate code I've written will enable run Jest and Cypress tests upon each merge:
+This boilerplate code I've written will enable run ESlint, Jest and Cypress tests upon each merge:
 
 ````Github Actions
 name: CI
@@ -195,8 +205,8 @@ jobs:
 
     name: Node.js ${{ matrix.node-version }}
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+    - name: Checkout
+      uses: actions/checkout@v3
 
     - name: Setup Node.js
       uses: actions/setup-node@v2
@@ -205,21 +215,21 @@ jobs:
 
     - name: Install dependencies
       run: |
-        npm ci
+        npm install
+
+    - name: Run ESLint
+      run: npm run lint
 
     - name: Test with Jest
       run: |
         npm test
-
-    - name: Checkout
-      uses: actions/checkout@v3
 
     - name: Cypress run
       uses: cypress-io/github-action@v5
       with:
         start: npm run dev
         wait-on: 'http://localhost:3000'
-        ```
+
 ````
 
 ## Helpful resourses
