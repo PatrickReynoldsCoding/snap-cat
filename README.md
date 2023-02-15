@@ -151,6 +151,11 @@ To prevent editing all your hyphenated class names, you can call them as an arra
 
 ``` Javascript
 // .eslintrc.js
+// Add these properties to config
+
+    "extends": [
+        "next"
+    ],
     "rules": {
       "react/prop-types": "off",
       "indent": ["error", 2]
