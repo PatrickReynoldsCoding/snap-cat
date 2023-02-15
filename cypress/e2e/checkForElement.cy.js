@@ -10,3 +10,9 @@ describe("check for html elements", () => {
     cy.get("[class*=cat-card-interface_]").should("exist");
   });
 });
+
+// Rough plan
+// cy.get('button').click();
+// cy.get('button').should('be.disabled');
+// cy.wait(2000);
+// cy.get('button').should('not.be.disabled');
