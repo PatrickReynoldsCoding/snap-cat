@@ -9,6 +9,10 @@
 This is a simple one page website built with Next.js.
 It's aim is to use a button to pull a cat fact from [https://catfact.ninja/#/Facts/](https://catfact.ninja/#/Facts/) and a cat image from [https://api.thecatapi.com/v1/images/search](https://api.thecatapi.com/v1/images/search) and present in a card.
 
+### Google Lighthouse score
+
+<kbd><img src="./public/images/readme/google-lighthouse-score.png" /></kbd>
+
 ## Technologies used
 
 ### Testing
