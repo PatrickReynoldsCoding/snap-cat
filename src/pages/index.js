@@ -1,16 +1,12 @@
 import styles from "@/styles/Home.module.css";
 
 // Components
-import HomeContainer from "../components/HomeContainer";
-import Logo from "@/components/Logo";
-import Footer from "@/components/Footer";
+import { HomeWithNavAndFoot } from "@/components/NavAndFooterAdder";
 
 export default function Home() {
   return (
     <div className={styles["home"]}>
-      <Logo />
-      <HomeContainer />
-      <Footer />
+      <HomeWithNavAndFoot />
     </div>
   );
 }
